@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="avD-Zx-HwU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TVO-2M-y3u">
+            <objects>
+                <viewController id="avD-Zx-HwU" customClass="ARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zbF-6a-PkL"/>
+                        <viewControllerLayoutGuide type="bottom" id="agZ-ah-br9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyW-Ds-fhV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVw-UU-fUE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iVw-UU-fUE" firstAttribute="top" secondItem="zbF-6a-PkL" secondAttribute="bottom" id="6GR-jn-JDC"/>
+                            <constraint firstAttribute="trailing" secondItem="iVw-UU-fUE" secondAttribute="trailing" id="Jvf-Cq-coV"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="iVw-UU-fUE" secondAttribute="bottom" id="RPL-7P-zSn"/>
+                            <constraint firstItem="iVw-UU-fUE" firstAttribute="leading" secondItem="WyW-Ds-fhV" secondAttribute="leading" id="fZ3-u8-cWt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SceneView" destination="iVw-UU-fUE" id="bO5-oJ-mAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmg-N1-IqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="-18.440779610194905"/>
+        </scene>
+    </scenes>
+</document>

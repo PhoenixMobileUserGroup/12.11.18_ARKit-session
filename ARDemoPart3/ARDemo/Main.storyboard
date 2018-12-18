@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="avD-Zx-HwU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="TVO-2M-y3u">
+            <objects>
+                <viewController id="avD-Zx-HwU" customClass="ARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zbF-6a-PkL"/>
+                        <viewControllerLayoutGuide type="bottom" id="agZ-ah-br9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyW-Ds-fhV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVw-UU-fUE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9z-2Y-Urj">
+                                <rect key="frame" x="16" y="610" width="52" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="LeftButtonTapped:" destination="avD-Zx-HwU" eventType="touchUpInside" id="TU9-jp-kXu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpB-dp-5zm">
+                                <rect key="frame" x="114" y="610" width="70" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="RightButtonTapped:" destination="avD-Zx-HwU" eventType="touchUpInside" id="urb-3z-dzy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uww-0B-UUi">
+                                <rect key="frame" x="321" y="610" width="38" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="RR"/>
+                                <connections>
+                                    <action selector="RotateRightTapped:" destination="avD-Zx-HwU" eventType="touchUpInside" id="Bdj-Sn-Dwh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-bO-FvR">
+                                <rect key="frame" x="220" y="610" width="36" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="RL"/>
+                                <connections>
+                                    <action selector="RotateLeftTapped:" destination="avD-Zx-HwU" eventType="touchUpInside" id="wtB-Cb-daZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uww-0B-UUi" firstAttribute="leading" secondItem="t0j-bO-FvR" secondAttribute="trailing" constant="65" id="30N-5p-KuL"/>
+                            <constraint firstItem="iVw-UU-fUE" firstAttribute="top" secondItem="zbF-6a-PkL" secondAttribute="bottom" id="6GR-jn-JDC"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="t0j-bO-FvR" secondAttribute="bottom" constant="8" id="Cxc-KT-plc"/>
+                            <constraint firstAttribute="trailing" secondItem="iVw-UU-fUE" secondAttribute="trailing" id="Jvf-Cq-coV"/>
+                            <constraint firstItem="HpB-dp-5zm" firstAttribute="leading" secondItem="V9z-2Y-Urj" secondAttribute="trailing" constant="46" id="PR1-Rz-22H"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="iVw-UU-fUE" secondAttribute="bottom" id="RPL-7P-zSn"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="HpB-dp-5zm" secondAttribute="bottom" constant="8" id="TKb-Y3-K2d"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="Uww-0B-UUi" secondAttribute="bottom" constant="8" id="a98-bB-01K"/>
+                            <constraint firstItem="V9z-2Y-Urj" firstAttribute="leading" secondItem="WyW-Ds-fhV" secondAttribute="leadingMargin" id="b7M-QU-RLc"/>
+                            <constraint firstItem="iVw-UU-fUE" firstAttribute="leading" secondItem="WyW-Ds-fhV" secondAttribute="leading" id="fZ3-u8-cWt"/>
+                            <constraint firstItem="agZ-ah-br9" firstAttribute="top" secondItem="V9z-2Y-Urj" secondAttribute="bottom" constant="8" id="leh-rB-pjm"/>
+                            <constraint firstItem="Uww-0B-UUi" firstAttribute="trailing" secondItem="WyW-Ds-fhV" secondAttribute="trailingMargin" id="w3X-ES-fmx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="SceneView" destination="iVw-UU-fUE" id="bO5-oJ-mAF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmg-N1-IqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="-18.440779610194905"/>
+        </scene>
+    </scenes>
+</document>
